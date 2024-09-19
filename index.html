@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKECARD</title>
+    <link rel="stylesheet" href="pokeCard/sass/style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="shortcut icon" href="img/poke-favicon.jfif" type="img/x-icon">
+</head>
+<body>
+
+    <header id="nav-placeholder">
+
+    </header>
+
+    <main class="container">
+        <template id="template-card">
+
+            <article class="card">
+                <div class="card-body">
+    
+                    <img src="img/squirtle.png" alt="POKEMON" class="card-body-img">
+                    <hr class="card-body-line">
+                    <h1 class="card-body-title">
+                        Pokemon
+                        <span>#numero</span>
+                    </h1>
+    
+                </div>
+                <footer class="card-footer">
+                    <div class="card-footer-description">
+                        <h3>Tipos</h3>
+                        <ul class="card-footer-description-types">
+                       </ul>
+    
+                    </div>
+                    <div class="card-footer-description">
+                        <h3>Habilidades</h3>
+                        <ul class="card-footer-description-abilities">
+                        </ul>
+    
+                    </div>
+                    <div class="card-footer-description">
+                        <h3>shiny</h3>
+                        <p>#vida de pokemon</p>
+    
+                    </div>
+                    
+    
+                </footer>
+              
+            </article>
+
+        </template>
+        <button class="button-generate" id="generate-btn" type="button">cambiar</button>
+
+        
+    </main>
+    
+    <script src="pokeCard/js/app.js"></script>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
+

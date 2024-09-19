@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeTeam</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <audio id="background-audio" src="img/Pokemon Red Blue.mp3" autoplay loop>AUDIO</audio>
+    <audio id="select-audio" src="img/tmpq91k5v_6.mp3" >AUDIO</audio>
+    
+    <header id="nav-placeholder"></header>
+
+    <button id="mute-toggle">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <main class="container">
+
+        <section class="section section-gender">
+            <h2>Selecciona tu personaje</h2>
+            <figure class="section-gender-images">
+
+                <div class="section-gender-images male"  onclick="selectImage(this)">
+                    <img src="img/Male.webp" alt="Imagen de Hombre">
+
+                </div>
+
+                <div class="section-gender-images female" onclick="selectImage(this)">
+                    <img src="img/Female.webp" alt="Imagen de Mujer">
+                </div>
+
+            </figure>
+        </section>
+
+        <section class="section section-pokemon">
+            <h2>Selecciona tu equipo</h2>
+
+            <div class="section-pokemon-buttons">
+                <button type="button">Aleatorio</button>
+                <button type="button">Personalizado</button>
+            </div>
+
+            <div class="section-pokemon-cards">
+                <article class="card">HOLA</article>
+                <article class="card">HOLA</article>
+                <article class="card">HOLA</article>
+                <article class="card">HOLA</article>
+                <article class="card">HOLA</article>
+                <article class="card">HOLA</article>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/PokeTeam.js">
+    </script>
+    <script>
+        fetch('../nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
